@@ -94,6 +94,9 @@ header {
       top: 0px;
       right: 15px;
       box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+      -o-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+      -webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+      -moz-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
       width: 16px; }
     @media screen and (min-width: 320px) and (max-width: 1024px) {
       header .menu-trigger {

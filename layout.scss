@@ -14,6 +14,13 @@
 	font-family: Georgia;
 	font-weight: normal;
 }
+
+@mixin box-shadow{
+	box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+	-o-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+	-webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+	-moz-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+}
 // @end mixins
 body{
 	font-size: 100%;
@@ -114,7 +121,7 @@ header{
 				display: block;
 				top: 0px;
 				right: 15px;
-				box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+				@include box-shadow;
 				width: 16px;
 			}
 			@media screen and (min-width: 320px) and (max-width: 1024px){
