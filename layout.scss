@@ -54,7 +54,7 @@ h2{
 	& h1,h2{
 		margin: 0px;
 	}
-	@media screen and (min-width: 480px) and (max-width: 1024px){
+	@media screen and (min-width: 320px) and (max-width: 1024px){
 		width: 100%;
 	}
 }
@@ -65,7 +65,7 @@ h2{
 	& h2{
 		margin: 0px;
 	}
-	@media screen and (min-width: 480px) and (max-width: 1024px){
+	@media screen and (min-width: 320px) and (max-width: 1024px){
 		width: 100%;
 	}
 }
@@ -96,7 +96,7 @@ header{
 						}
 					}	
 				}
-			@media screen and (min-width: 480px) and (max-width: 1024px){
+			@media screen and (min-width: 320px) and (max-width: 1024px){
 				display: none;
 				}	
 			}
@@ -117,7 +117,7 @@ header{
 				box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
 				width: 16px;
 			}
-			@media screen and (min-width: 480px) and (max-width: 1024px){
+			@media screen and (min-width: 320px) and (max-width: 1024px){
 				display: block;
 			}
 		}	
