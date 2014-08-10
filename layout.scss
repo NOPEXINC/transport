@@ -3,3 +3,161 @@
 * Prepared by 		:Zachariah Ngonyani (@zechtz)
 * Author Website 	:www.watabelabs.com
 ---------------------------------------------------------------------*/
+// @group variables
+	$font-color: #ddd;
+	$wrap-width: 1440px;
+	$nice-green: #47B713;
+	$default-link-color: $nice-green;
+// @end
+// @group mixins
+@mixin font-settings{
+	font-family: Georgia;
+	font-weight: normal;
+}
+// @end mixins
+body{
+	font-size: 100%;
+	font-family: Georgia,serif;
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	color: $default-link-color;
+	&:hover{
+		color: lighten($default-link-color, 8%);
+	}
+}
+h1{
+	font-size: 3em;
+	color: darken($font-color, 50%);
+	@include font-settings;
+}
+h2{
+	font-size: 1.4em;
+	@include font-settings;
+	color: darken($font-color, 40%);
+}
+// @group Utility Classes
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.big{
+	width: 68%;
+	position: relative;
+	display: block;
+	& h1,h2{
+		margin: 0px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 1024px){
+		width: 100%;
+	}
+}
+.small{
+	width: 30%;
+	position: relative;
+	display: block;
+	& h2{
+		margin: 0px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 1024px){
+		width: 100%;
+	}
+}
+// @end utility classes
+header{
+	background: #000;
+	padding: 30px 0px;
+	position: relative;
+	font-family: Helvetica, serif;
+	& ul{
+		padding: 0px;
+		margin: 0px;
+		& li{
+		display: inline;
+			& a{
+				padding: 10px 20px;
+				text-decoration: none;
+				font-size: 1em;
+					&.logo{
+						color: #fff;
+						font-size: 1.2rem;
+					}
+				&.contact{
+						background: $nice-green;
+						color: #fff;
+						&:hover{
+							background: darken($nice-green, 10%);
+						}
+					}	
+				}
+			@media screen and (min-width: 480px) and (max-width: 1024px){
+				display: none;
+				}	
+			}
+		}
+		& .menu-trigger{
+			display: none;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $nice-green;
+			&:after{
+				position: absolute;
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				right: 15px;
+				box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+				width: 16px;
+			}
+			@media screen and (min-width: 480px) and (max-width: 1024px){
+				display: block;
+			}
+		}	
+}
+.content{
+	margin-top: 40px;
+	font-size: 1.1em;
+	color: darken($font-color, 60%);
+	p{
+		padding: 0 0 0.5em 0;
+		line-height: 1.7em;
+	}
+	.big{
+	}
+	.top-block{
+		border: 2px solid #ddd;
+		padding: 20px;
+		margin: 20px 0px 20px 0px;
+		display: block;
+		line-height: 1.5em;
+	}
+	.bottom-block{
+		@extend .top-block;
+		margin: 0px;
+	}
+}
+.wrapper{
+	max-width: 100%;
+	width: 80%;
+	margin: 0px auto;
+}
+
+footer{
+	background: #000;
+	padding: 30px 0px;
+	color: rgba(254, 255, 253, 0.25);
+	@media only screen and (min-width: 480px) and (max-width: 1024px){
+		height: auto;
+	}
+	& #bottom-box-block{
+		margin-bottom: 10px;
+	}
+}
